@@ -47,7 +47,7 @@ public class AirplaneBehavior extends BaseBehavior {
 								.setHeaderTextField("HEADER TEXT")
 								.setQrCode("12345")
 								.setSeat("12")
-								.setTravelClass(TravelClass.FIRST_CLASS)
+								.setTravelClass(TravelClass.FIRST)
 								.endBoardingPass()
 								.addBoardingPass(
 										"Passenger 2",
