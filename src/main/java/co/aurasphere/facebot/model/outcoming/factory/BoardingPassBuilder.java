@@ -9,7 +9,7 @@ import co.aurasphere.facebot.model.outcoming.template.airline.TravelClass;
 
 /**
  * Builder for a {@link BoardingPass} object.
- * 
+ *
  * @author Donato
  * @date 25/ago/2016
  */
@@ -28,7 +28,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 
 	/**
 	 * Default constructor. Creates a builder for a {@link BoardingPass} object.
-	 * 
+	 *
 	 * @param parentBuilder
 	 *            the parent builder of this one. It can't be null. * @param
 	 *            passengerName the passenger name. It can't be empty.
@@ -52,7 +52,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the {@link TravelClass} for the current {@link BoardingPass} object.
 	 * This field is optional.
-	 * 
+	 *
 	 * @param travelClass
 	 *            the travel class to set.
 	 * @return this builder.
@@ -65,7 +65,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the seat for the current {@link BoardingPass} object. This field is
 	 * optional.
-	 * 
+	 *
 	 * @param seat
 	 *            the seat to set.
 	 * @return this builder.
@@ -79,7 +79,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 * Adds an auxiliary field for the current {@link BoardingPass} object. This
 	 * field is optional. There can be at most 5 auxiliary fields per boarding
 	 * pass.
-	 * 
+	 *
 	 * @param label
 	 *            the label for the additional field. It can't be empty.
 	 * @param value
@@ -96,7 +96,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 * Adds an auxiliary field for the current {@link BoardingPass} object. This
 	 * field is optional. There can be at most 5 auxiliary fields per boarding
 	 * pass.
-	 * 
+	 *
 	 * @param auxiliaryField
 	 *            the field to add. It can't be null.
 	 * @return this builder.
@@ -110,7 +110,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 * Adds a secondary field for the current {@link BoardingPass} object. This
 	 * field is optional. There can be at most 5 secondary fields per boarding
 	 * pass.
-	 * 
+	 *
 	 * @param label
 	 *            the label for the additional field. It can't be empty.
 	 * @param value
@@ -127,7 +127,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 * Adds a secondary field for the current {@link BoardingPass} object. This
 	 * field is optional. There can be at most 5 secondary fields per boarding
 	 * pass.
-	 * 
+	 *
 	 * @param secondaryField
 	 *            the field to add. It can't be null.
 	 * @return this builder.
@@ -140,7 +140,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the header image URL for the current {@link BoardingPass} object.
 	 * This field is optional.
-	 * 
+	 *
 	 * @param headerImageUrl
 	 *            the URL of the header image.
 	 */
@@ -152,7 +152,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the header text for the current {@link BoardingPass} object. This
 	 * field is optional.
-	 * 
+	 *
 	 * @param headerTextField
 	 *            the text of the header.
 	 */
@@ -164,11 +164,11 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the Aztec or QR code for the current {@link BoardingPass} object.
 	 * This field or the barcode image URL must be set.
-	 * 
+	 *
 	 * @param qrCode
 	 *            the Aztec or QR code. It can't be empty unless the barcode
 	 *            image URL is set.
-	 * 
+	 *
 	 * @see #setBarcodeImageUrl(String)
 	 */
 	public BoardingPassBuilder setQrCode(String qrCode) {
@@ -179,11 +179,11 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Sets the URL of the barcode image for the current {@link BoardingPass}
 	 * object. This field or the QR code must be set.
-	 * 
+	 *
 	 * @param barcodeImageUrl
 	 *            the URL of the barcode image. It can't be empty unless the QR
 	 *            code is set.
-	 * 
+	 *
 	 * @see #setQrCode(String)
 	 */
 	public BoardingPassBuilder setBarcodeImageUrl(String barcodeImageUrl) {
@@ -194,7 +194,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Adds a {@link FlightInfo} object to this {@link BoardingPass}. This
 	 * object is mandatory and can't be null for Airline templates.
-	 * 
+	 *
 	 * @param flightNumber
 	 *            the flight number. It can't be empty.
 	 * @return a builder for the {@link FlightInfo} object.
@@ -209,7 +209,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 * object is mandatory and can't be null for Airline templates. Used only by
 	 * delegated classes. Should not be called directly. Use
 	 * {@link #addFlightInfo(String)} instead.
-	 * 
+	 *
 	 * @param flightInfo
 	 *            the flight info to add. It can't be null.
 	 */
@@ -222,7 +222,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	/**
 	 * Builds the current object, adds it to the parent builder and returns the
 	 * parent builder.
-	 * 
+	 *
 	 * @return the parent builder of this builder.
 	 */
 	public AirlineBoardingPassTemplateBuilder endBoardingPass() {
@@ -236,7 +236,7 @@ public class BoardingPassBuilder extends FlightInfoBuilderDelegator {
 	 */
 	@Override
 	@Deprecated
-	FaceBotResponse build(MessageEnvelope envelope) {
+	public FaceBotResponse build(MessageEnvelope envelope) {
 		return null;
 	}
 
