@@ -34,6 +34,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.glassfish.web/javax.el
     compile group: 'org.glassfish.web', name: 'javax.el', version: '2.2.6'
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
+
+
 }
 
 jar {

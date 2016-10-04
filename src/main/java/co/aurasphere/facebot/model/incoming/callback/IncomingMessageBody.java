@@ -1,65 +1,67 @@
 package co.aurasphere.facebot.model.incoming.callback;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 import co.aurasphere.facebot.model.base.Attachment;
 import co.aurasphere.facebot.model.outcoming.message.Message;
 import co.aurasphere.facebot.model.outcoming.quickreply.QuickReply;
+import lombok.EqualsAndHashCode;
 
-import com.google.gson.annotations.SerializedName;
+@EqualsAndHashCode(callSuper = false, exclude = {"quickReply", "attachments"})
+public class IncomingMessageBody extends Message {
+    // message callback
+    private static final long serialVersionUID = 1L;
 
-public class IncomingMessageBody extends Message{
-// message callback
-	private static final long serialVersionUID = 1L;
+    private String mid;
 
-	private String mid;
-	
-	private String seq;
-	
-	private String text;
-	
-	@SerializedName("quick_reply")
-	private QuickReply quickReply;
-	
-	private List<Attachment> attachments;
-	
-	public String getMid() {
-		return mid;
-	}
+    private String seq;
 
-	public void setMid(String mid) {
-		this.mid = mid;
-	}
+    private String text;
 
-	public String getSeq() {
-		return seq;
-	}
+    @SerializedName("quick_reply")
+    private QuickReply quickReply;
 
-	public void setSeq(String seq) {
-		this.seq = seq;
-	}
+    private List<Attachment> attachments;
 
-	public String getText() {
-		return text;
-	}
+    public String getMid() {
+        return mid;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public void setMid(String mid) {
+        this.mid = mid;
+    }
 
-	public QuickReply getQuickReply() {
-		return quickReply;
-	}
+    public String getSeq() {
+        return seq;
+    }
 
-	public void setQuickReply(QuickReply quickReply) {
-		this.quickReply = quickReply;
-	}
+    public void setSeq(String seq) {
+        this.seq = seq;
+    }
 
-	public List<Attachment> getAttachments() {
-		return attachments;
-	}
+    public String getText() {
+        return text;
+    }
 
-	public void setAttachments(List<Attachment> attachments) {
-		this.attachments = attachments;
-	}
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public QuickReply getQuickReply() {
+        return quickReply;
+    }
+
+    public void setQuickReply(QuickReply quickReply) {
+        this.quickReply = quickReply;
+    }
+
+    public List<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<Attachment> attachments) {
+        this.attachments = attachments;
+    }
 }
