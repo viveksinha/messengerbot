@@ -4,6 +4,7 @@ import co.aurasphere.facebot.model.outcoming.template.button.AccountLinkButton;
 import co.aurasphere.facebot.model.outcoming.template.button.Button;
 import co.aurasphere.facebot.model.outcoming.template.button.ButtonType;
 import co.aurasphere.facebot.model.outcoming.template.button.PostbackButton;
+import co.aurasphere.facebot.model.outcoming.template.button.ShareButton;
 import co.aurasphere.facebot.model.outcoming.template.button.WebUrlButton;
 
 /**
@@ -58,4 +59,15 @@ public class ButtonFactory {
     public static Button createAccountLinkingButton(String accountLinkingUrl) {
         return new AccountLinkButton("account-link-url", accountLinkingUrl);
     }
+
+    /**
+     * Creates a button with a share property 
+     *
+     * @return a {@link ShareButton}.
+     */
+    public static Button createShareButton() {
+        return new ShareButton();
+    }
+
+
 }
