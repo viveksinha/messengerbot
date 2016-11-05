@@ -61,7 +61,7 @@ public class ButtonFactory {
     }
 
     /**
-     * Creates a button with a share property 
+     * Creates a button with a share property
      *
      * @return a {@link ShareButton}.
      */

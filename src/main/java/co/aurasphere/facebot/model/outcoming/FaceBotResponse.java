@@ -6,6 +6,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import co.aurasphere.facebot.model.base.User;
+import lombok.EqualsAndHashCode;
 
 /**
  * Object that represents a FaceBot response.
@@ -13,6 +14,7 @@ import co.aurasphere.facebot.model.base.User;
  * @author Donato
  * @date 08/ago/2016
  */
+@EqualsAndHashCode
 public abstract class FaceBotResponse implements Serializable {
 
 	private static final long serialVersionUID = 1L;

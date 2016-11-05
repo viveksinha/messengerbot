@@ -6,7 +6,6 @@ package co.aurasphere.facebot.model.outcoming.template.button;
 public class ShareButton extends Button {
 
     public ShareButton() {
-        this.setTitle("Share");
         this.setType(ButtonType.ELEMENT_SHARE);
     }
 }

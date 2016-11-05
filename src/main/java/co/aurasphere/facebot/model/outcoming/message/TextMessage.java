@@ -4,7 +4,9 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = false)
 public class TextMessage extends Message {
 
 	private static final long serialVersionUID = 1L;

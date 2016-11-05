@@ -21,7 +21,6 @@ public abstract class Button implements Serializable{
 	 * The button title.
 	 */
 	@Size(max=20)
-	@NotEmpty
 	protected String title;
 
 	public ButtonType getType() {
