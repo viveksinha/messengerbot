@@ -16,9 +16,9 @@ public class EchoAutoReply extends AutoReply {
 	/**
 	 * {@inheritDoc} It replies with the last received message.
 	 */
-	public FaceBotResponse createResponse(MessageEnvelope envelope) {
+	public void createResponse(MessageEnvelope envelope) {
 		String lastMessage = safeGetMessage(envelope);
-		return ReplyFactory.addTextMessageOnly(lastMessage).build(envelope);
+		faceBotResponseList.add(ReplyFactory.addTextMessageOnly(lastMessage).build(envelope));
 	}
 
 }

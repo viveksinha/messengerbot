@@ -10,7 +10,7 @@ public class PassengerInfo implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	@NotEmpty
+
 	@SerializedName("passenger_id")
 	private String passengerId;
 	

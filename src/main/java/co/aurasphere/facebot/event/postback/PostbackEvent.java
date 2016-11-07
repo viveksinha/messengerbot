@@ -14,7 +14,7 @@ import co.aurasphere.facebot.model.incoming.MessageEnvelope;
 public class PostbackEvent extends BaseStringEvent {
 
 	/**
-	 * @see BaseStringEvent#BaseEvent(String)
+	 * @see BaseStringEvent
 	 */
 	public PostbackEvent(String expectedPayload, boolean caseSensitive) {
 		super(expectedPayload, caseSensitive);

@@ -18,8 +18,8 @@ public class TemplateBehavior extends BaseBehavior {
 		addActionFrame(new MessageEvent("button template"), new AutoReply() {
 
 			@Override
-			public FaceBotResponse createResponse(MessageEnvelope envelope) {
-				return ReplyFactory
+			public void createResponse(MessageEnvelope envelope) {
+				faceBotResponseList.add(ReplyFactory
 						.addButtonTemplate("Test button template")
 						.addPostbackButton("postback button",
 								"postback button payload")
@@ -27,7 +27,7 @@ public class TemplateBehavior extends BaseBehavior {
 								"+393541247844")
 						.addUrlButton("web url button",
 								"https://github.com/Aurasphere/facebot")
-						.build(envelope);
+						.build(envelope));
 			}
 		});
 
@@ -36,8 +36,8 @@ public class TemplateBehavior extends BaseBehavior {
 		addActionFrame(new MessageEvent("generic template"), new AutoReply() {
 
 			@Override
-			public FaceBotResponse createResponse(MessageEnvelope envelope) {
-				return ReplyFactory
+			public void createResponse(MessageEnvelope envelope) {
+				faceBotResponseList.add(ReplyFactory
 						.addGenericTemplate()
 						.addElement("Generic Template Element 1")
 						.addPostbackButton("postback button",
@@ -50,7 +50,7 @@ public class TemplateBehavior extends BaseBehavior {
 						.setRedirectUrl("www.aurasphere.co")
 						.endElement()
 						.addQuickReply("Quick Reply 1",
-								"Payload of Quick Reply 1").build(envelope);
+								"Payload of Quick Reply 1").build(envelope));
 			}
 		});
 
@@ -60,14 +60,14 @@ public class TemplateBehavior extends BaseBehavior {
 				new AutoReply() {
 
 					@Override
-					public FaceBotResponse createResponse(
+					public void createResponse(
 							MessageEnvelope envelope) {
-						return ReplyFactory
+						faceBotResponseList.add(ReplyFactory
 								.addTextMessageOnly(
 										"Text message with quick replies")
 								.addQuickReply("Quick reply 1",
 										"Payload for quick reply 1")
-								.build(envelope);
+								.build(envelope));
 					}
 				});
 

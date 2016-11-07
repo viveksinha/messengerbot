@@ -30,8 +30,8 @@ public class MessageAutoReply extends AutoReply {
 	/**
 	 * {@inheritDoc} It replies with the message specified in the constructor.
 	 */
-	public FaceBotResponse createResponse(MessageEnvelope envelope) {
-		return ReplyFactory.addTextMessageOnly(replyMessage).build(envelope);
+	public void createResponse(MessageEnvelope envelope) {
+		faceBotResponseList.add(ReplyFactory.addTextMessageOnly(replyMessage).build(envelope));
 	}
 
 }

@@ -8,10 +8,10 @@ public class ProductInfo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@NotEmpty
+
 	private String title;
 	
-	@NotEmpty
+
 	private String value;
 	
 	public ProductInfo(String title, String value){

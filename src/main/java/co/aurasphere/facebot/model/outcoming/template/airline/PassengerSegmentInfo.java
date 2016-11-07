@@ -19,20 +19,19 @@ public class PassengerSegmentInfo implements Serializable {
 	@SerializedName("segment_id")
 	private String segmentId; 
 	
-	@NotEmpty
+
 	@SerializedName("passenger_id")
 	private String passengerId;
 	
-	@NotEmpty
+
 	private String seat;
 	
-	@NotEmpty
+
 	@SerializedName("seat_type")
 	private String seatType;
 	
-	@Valid
+
 	@Size(max=4)
-	@NotEmpty
 	@SerializedName("product_info")
 	private List<ProductInfo> productInfo;
 	

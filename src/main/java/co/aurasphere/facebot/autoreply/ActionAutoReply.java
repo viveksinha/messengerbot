@@ -32,8 +32,8 @@ public class ActionAutoReply extends AutoReply {
 	 * {@inheritDoc} Replies with a {@link TypingAction}.
 	 */
 	@Override
-	public FaceBotResponse createResponse(MessageEnvelope envelope) {
-		return ReplyFactory.addTypingAction(action).build(envelope);
+	public void createResponse(MessageEnvelope envelope) {
+		faceBotResponseList.add(ReplyFactory.addTypingAction(action).build(envelope));
 	}
 
 }

@@ -19,10 +19,10 @@ public class AirplaneBehavior extends BaseBehavior {
 				new AutoReply() {
 
 					@Override
-					public FaceBotResponse createResponse(
+					public void createResponse(
 							MessageEnvelope envelope) {
 
-						return ReplyFactory
+						faceBotResponseList.add(ReplyFactory
 								.addAirlineBoardingPassTemplate(
 										"TEST TEMPLATE", "en_US")
 								.setThemeColor("#009023")
@@ -59,7 +59,7 @@ public class AirplaneBehavior extends BaseBehavior {
 								.setDepartureAirport("CT", "Catania")
 								.setFlightSchedule(Calendar.getInstance(),
 										Calendar.getInstance()).endFlightInfo()
-								.endBoardingPass().build(envelope);
+								.endBoardingPass().build(envelope));
 					}
 				});
 
@@ -68,9 +68,9 @@ public class AirplaneBehavior extends BaseBehavior {
 				new AutoReply() {
 
 					@Override
-					public FaceBotResponse createResponse(
+					public void createResponse(
 							MessageEnvelope envelope) {
-						return ReplyFactory
+						faceBotResponseList.add(ReplyFactory
 								.addAirlineCheckinTemplate(
 										"Here's your checkin info", "en_US",
 										"assaf", "www.aurasphere.co")
@@ -79,7 +79,7 @@ public class AirplaneBehavior extends BaseBehavior {
 								.setDepartureAirport("BG", "BG")
 								.setFlightSchedule(Calendar.getInstance(),
 										Calendar.getInstance()).endFlightInfo()
-								.build(envelope);
+								.build(envelope));
 					}
 
 				});
@@ -89,9 +89,9 @@ public class AirplaneBehavior extends BaseBehavior {
 				new AutoReply() {
 
 					@Override
-					public FaceBotResponse createResponse(
+					public void createResponse(
 							MessageEnvelope envelope) {
-						return ReplyFactory
+						faceBotResponseList.add(ReplyFactory
 								.addAirlineFlightUpdateTemplate(
 										"Your flight has an update", "en_US",
 										"121212", UpdateType.CANCELLATION)
@@ -100,7 +100,7 @@ public class AirplaneBehavior extends BaseBehavior {
 								.setDepartureAirport("D12", "Catania")
 								.setFlightSchedule(Calendar.getInstance(),
 										Calendar.getInstance()).endFlightInfo()
-								.build(envelope);
+								.build(envelope));
 					}
 				});
 
@@ -108,9 +108,9 @@ public class AirplaneBehavior extends BaseBehavior {
 		addActionFrame(new MessageEvent("itinerary airline template"),
 				new AutoReply() {
 					@Override
-					public FaceBotResponse createResponse(
+					public void createResponse(
 							MessageEnvelope envelope) {
-						return ReplyFactory
+						faceBotResponseList.add(ReplyFactory
 								.addAirlineItineraryTemplate(
 										"Here's your itinerary", "en_US",
 										"D0FQTK", 4032.54, "USD")
@@ -131,7 +131,7 @@ public class AirplaneBehavior extends BaseBehavior {
 								.endPassengerSegmentInfo()
 								.addPriceInfo("Cabin", 100)
 								.addPriceInfo("Ticket", 200).setTax(200)
-								.addQuickReply("OK", "OK").build(envelope);
+								.addQuickReply("OK", "OK").build(envelope));
 					}
 				});
 
